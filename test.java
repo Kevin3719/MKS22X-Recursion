@@ -32,7 +32,7 @@ public class test{
     System.out.println(recursion.fib(5));
     System.out.println("Should print 6765");
     System.out.println(recursion.fib(20));
-
+    System.out.println(recursion.makeAllSums(3));
   }
 
 

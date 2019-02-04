@@ -36,7 +36,22 @@ public class recursion{
 
     /*As Per classwork*/
     public static ArrayList<Integer> makeAllSums(int n){
-      return null;
+      // creates the list that is going up the integer list;
+      ArrayList<Integer> up = new ArrayList<Integer>();
+      helpermakeAllSum(n,0,0,up);
+      // returns the changed array;
+      return up;
     }
+    public static void helpermakeAllSum(int n , int start, int carry, ArrayList<Integer> up) {
+      // if there is no more numbers to add
+        if (n == start) {
+          up.add(carry);
+        }
+        // either adds 0 or start + 1 (the next integer)
+        if (n > start) {
+          helpermakeAllSum(n, start + 1, carry, up);
+          helpermakeAllSum(n, start + 1, carry + start + 1, up);
+        }
+      }
 
 }
