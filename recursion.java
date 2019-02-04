@@ -8,13 +8,13 @@ public class recursion{
 
     */
     public static double sqrt(double n, double tolerance){
-      return helpersprt(n, 1, tolerance);
+      return helpersprt(n, 1.0, tolerance);
     }
     public static double helpersprt(double n, double guess, double tolerance) {
-      if (tolerance < guess / n || tolerance < n / guess) {
+      if (tolerance > Math.abs((guess * guess - n) / (guess * guess))) {
         return guess;
       }
-      return helpersprt(n, ((n / guess) + guess) / 2, tolerance);
+      return helpersprt(n, ((n / guess) + guess) / 2.0, tolerance);
     }
     /*Recursively find the n'th fibbonaci number in linear time
      *fib(0) = 0
