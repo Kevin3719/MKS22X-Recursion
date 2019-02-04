@@ -20,7 +20,18 @@ public class test{
     System.out.println(recursion.sqrt(1600,.001));
     System.out.println("Should print 50! \n Actually is:");
     System.out.println(recursion.sqrt(2500,.001));
-
+    System.out.println("Should print 0");
+    System.out.println(recursion.fib(0));
+    System.out.println("Should print 1");
+    System.out.println(recursion.fib(1));
+    System.out.println("Should print 2");
+    System.out.println(recursion.fib(2));
+    System.out.println("Should print 3");
+    System.out.println(recursion.fib(3));
+    System.out.println("Should print 5");
+    System.out.println(recursion.fib(5));
+    System.out.println("Should print 6765");
+    System.out.println(recursion.fib(20));
 
   }
 
