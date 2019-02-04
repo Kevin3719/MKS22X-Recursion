@@ -23,7 +23,15 @@ public class recursion{
      *precondition: n is non-negative
      */
     public static int fib(int n){
-      return 0;
+      return helperfib(n, 0, 0, 1);
+    }
+
+    public static int helperfib(int n, int start, int a, int b) {
+      if (n == start) {
+        return a;
+      }
+      return helperfib(n, start + 1, b, a + b);
+
     }
 
     /*As Per classwork*/
